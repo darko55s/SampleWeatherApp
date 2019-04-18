@@ -6,4 +6,5 @@ target 'SampleWeatherApp' do
 
   pod 'IGListKit', '~> 3.0'
   pod 'Alamofire'
+  pod 'RealmSwift'
 end
