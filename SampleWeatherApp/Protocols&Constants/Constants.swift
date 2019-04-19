@@ -19,3 +19,4 @@ typealias ModelsCompletion = ([Model]) -> Void
 typealias JSONDictionary = [String: Any]
 
 let API_BASE_URL = "https://www.metaweather.com/api/"
+let ICON_BASE_URL = "https://www.metaweather.com/api/static/img/weather/png/64/"

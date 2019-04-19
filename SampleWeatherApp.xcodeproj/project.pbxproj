@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		00192905A8D6C10B71ED0621 /* Pods_SampleWeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BEBEE24DE09C1B9B3D68B2 /* Pods_SampleWeatherApp.framework */; };
+		7B4B0C942269C519003C6B57 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4B0C932269C518003C6B57 /* DayCell.swift */; };
+		7B4B0C962269C522003C6B57 /* DayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4B0C952269C522003C6B57 /* DayCell.xib */; };
 		7B7ACBDA2269235300A337A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7ACBD92269235300A337A3 /* AppDelegate.swift */; };
 		7B7ACBDC2269235300A337A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7ACBDB2269235300A337A3 /* ViewController.swift */; };
 		7B7ACBDF2269235300A337A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B7ACBDD2269235300A337A3 /* Main.storyboard */; };
@@ -21,10 +23,19 @@
 		7B7ACBF922692E8000A337A3 /* WeatherDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7ACBF822692E8000A337A3 /* WeatherDetails.swift */; };
 		7B7ACBFB22692FB800A337A3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7ACBFA22692FB800A337A3 /* Extensions.swift */; };
 		7B7ACBFD2269394B00A337A3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7ACBFC2269394B00A337A3 /* NetworkManager.swift */; };
+		7BB0113122699156003EA219 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB0113022699156003EA219 /* HomeViewController.swift */; };
+		7BB01134226992DC003EA219 /* CitySectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB01133226992DC003EA219 /* CitySectionController.swift */; };
+		7BB011362269977A003EA219 /* AddNewCitySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB011352269977A003EA219 /* AddNewCitySection.swift */; };
+		7BB0113A2269981C003EA219 /* AddNewButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB011382269981C003EA219 /* AddNewButtonCell.swift */; };
+		7BB0113B2269981C003EA219 /* AddNewButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB011392269981C003EA219 /* AddNewButtonCell.xib */; };
+		7BB0113E2269982A003EA219 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB0113C2269982A003EA219 /* CityCell.swift */; };
+		7BB0113F2269982A003EA219 /* CityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB0113D2269982A003EA219 /* CityCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		09BEBEE24DE09C1B9B3D68B2 /* Pods_SampleWeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleWeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B4B0C932269C518003C6B57 /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
+		7B4B0C952269C522003C6B57 /* DayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayCell.xib; sourceTree = "<group>"; };
 		7B7ACBD62269235300A337A3 /* SampleWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B7ACBD92269235300A337A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B7ACBDB2269235300A337A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +51,13 @@
 		7B7ACBF822692E8000A337A3 /* WeatherDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetails.swift; sourceTree = "<group>"; };
 		7B7ACBFA22692FB800A337A3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7B7ACBFC2269394B00A337A3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		7BB0113022699156003EA219 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7BB01133226992DC003EA219 /* CitySectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySectionController.swift; sourceTree = "<group>"; };
+		7BB011352269977A003EA219 /* AddNewCitySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCitySection.swift; sourceTree = "<group>"; };
+		7BB011382269981C003EA219 /* AddNewButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewButtonCell.swift; sourceTree = "<group>"; };
+		7BB011392269981C003EA219 /* AddNewButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewButtonCell.xib; sourceTree = "<group>"; };
+		7BB0113C2269982A003EA219 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		7BB0113D2269982A003EA219 /* CityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCell.xib; sourceTree = "<group>"; };
 		9DC2FFFF903706AABC81D80A /* Pods-SampleWeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleWeatherApp.debug.xcconfig"; path = "Target Support Files/Pods-SampleWeatherApp/Pods-SampleWeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B889706AD4B299A115FCA681 /* Pods-SampleWeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleWeatherApp.release.xcconfig"; path = "Target Support Files/Pods-SampleWeatherApp/Pods-SampleWeatherApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,9 +77,6 @@
 		7B7ACBCD2269235300A337A3 = {
 			isa = PBXGroup;
 			children = (
-				7B7ACBF122692A9F00A337A3 /* Managers */,
-				7B7ACBEC226929E400A337A3 /* Protocols&Constants */,
-				7B7ACBEB226929DC00A337A3 /* Models */,
 				7B7ACBD82269235300A337A3 /* SampleWeatherApp */,
 				7B7ACBD72269235300A337A3 /* Products */,
 				FFB897F0E8FD514DD73BBC6C /* Pods */,
@@ -80,6 +95,12 @@
 		7B7ACBD82269235300A337A3 /* SampleWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				7BB0113722699802003EA219 /* UICollectionCells */,
+				7BB01132226992C7003EA219 /* SectionControllers */,
+				7BB0112F2269914A003EA219 /* Controllers */,
+				7B7ACBF122692A9F00A337A3 /* Managers */,
+				7B7ACBEC226929E400A337A3 /* Protocols&Constants */,
+				7B7ACBEB226929DC00A337A3 /* Models */,
 				7B7ACBD92269235300A337A3 /* AppDelegate.swift */,
 				7B7ACBDB2269235300A337A3 /* ViewController.swift */,
 				7B7ACBDD2269235300A337A3 /* Main.storyboard */,
@@ -117,6 +138,36 @@
 				7B7ACBFC2269394B00A337A3 /* NetworkManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		7BB0112F2269914A003EA219 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7BB0113022699156003EA219 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7BB01132226992C7003EA219 /* SectionControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7BB01133226992DC003EA219 /* CitySectionController.swift */,
+				7BB011352269977A003EA219 /* AddNewCitySection.swift */,
+			);
+			path = SectionControllers;
+			sourceTree = "<group>";
+		};
+		7BB0113722699802003EA219 /* UICollectionCells */ = {
+			isa = PBXGroup;
+			children = (
+				7BB011382269981C003EA219 /* AddNewButtonCell.swift */,
+				7BB011392269981C003EA219 /* AddNewButtonCell.xib */,
+				7BB0113C2269982A003EA219 /* CityCell.swift */,
+				7BB0113D2269982A003EA219 /* CityCell.xib */,
+				7B4B0C932269C518003C6B57 /* DayCell.swift */,
+				7B4B0C952269C522003C6B57 /* DayCell.xib */,
+			);
+			path = UICollectionCells;
 			sourceTree = "<group>";
 		};
 		8C012DCF2BBB50C4039CB369 /* Frameworks */ = {
@@ -196,8 +247,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BB0113B2269981C003EA219 /* AddNewButtonCell.xib in Resources */,
+				7BB0113F2269982A003EA219 /* CityCell.xib in Resources */,
 				7B7ACBE42269235400A337A3 /* LaunchScreen.storyboard in Resources */,
 				7B7ACBE12269235400A337A3 /* Assets.xcassets in Resources */,
+				7B4B0C962269C522003C6B57 /* DayCell.xib in Resources */,
 				7B7ACBDF2269235300A337A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +270,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-SampleWeatherApp/Pods-SampleWeatherApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
@@ -225,6 +280,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
@@ -263,12 +319,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B7ACBEE226929F900A337A3 /* Protocols.swift in Sources */,
+				7BB011362269977A003EA219 /* AddNewCitySection.swift in Sources */,
+				7BB0113E2269982A003EA219 /* CityCell.swift in Sources */,
 				7B7ACBFB22692FB800A337A3 /* Extensions.swift in Sources */,
 				7B7ACBFD2269394B00A337A3 /* NetworkManager.swift in Sources */,
 				7B7ACBF522692C3700A337A3 /* City.swift in Sources */,
+				7B4B0C942269C519003C6B57 /* DayCell.swift in Sources */,
 				7B7ACBDC2269235300A337A3 /* ViewController.swift in Sources */,
 				7B7ACBF322692AAB00A337A3 /* RealmManager.swift in Sources */,
 				7B7ACBDA2269235300A337A3 /* AppDelegate.swift in Sources */,
+				7BB0113A2269981C003EA219 /* AddNewButtonCell.swift in Sources */,
+				7BB0113122699156003EA219 /* HomeViewController.swift in Sources */,
+				7BB01134226992DC003EA219 /* CitySectionController.swift in Sources */,
 				7B7ACBF922692E8000A337A3 /* WeatherDetails.swift in Sources */,
 				7B7ACBF022692A2400A337A3 /* Constants.swift in Sources */,
 				7B7ACBF722692E3300A337A3 /* Weather.swift in Sources */,

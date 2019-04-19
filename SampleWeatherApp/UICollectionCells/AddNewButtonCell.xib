@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AddNewButtonCell" customModule="SampleWeatherApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37M-tL-7UJ">
+                        <rect key="frame" x="10" y="10" width="355" height="50"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YF3-h0-TKS">
+                                <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
+                                <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="ADD NEW CITY" image="plus">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onAddNew:" destination="gTV-IL-0wX" eventType="touchUpInside" id="JGI-w2-XvG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YF3-h0-TKS" firstAttribute="leading" secondItem="37M-tL-7UJ" secondAttribute="leading" id="CDx-qD-Jlo"/>
+                            <constraint firstAttribute="trailing" secondItem="YF3-h0-TKS" secondAttribute="trailing" id="F9S-Sx-m6B"/>
+                            <constraint firstAttribute="bottom" secondItem="YF3-h0-TKS" secondAttribute="bottom" id="lCP-lC-1ki"/>
+                            <constraint firstItem="YF3-h0-TKS" firstAttribute="top" secondItem="37M-tL-7UJ" secondAttribute="top" id="nxv-2c-peR"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="37M-tL-7UJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="9z1-n3-4WB"/>
+                <constraint firstItem="37M-tL-7UJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="VWZ-Xj-kEr"/>
+                <constraint firstAttribute="trailing" secondItem="37M-tL-7UJ" secondAttribute="trailing" constant="10" id="kkJ-dd-i6R"/>
+                <constraint firstAttribute="bottom" secondItem="37M-tL-7UJ" secondAttribute="bottom" constant="10" id="ohG-Cr-pd2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="btnAddnew" destination="YF3-h0-TKS" id="Yit-ml-q6T"/>
+            </connections>
+            <point key="canvasLocation" x="127" y="131"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="plus" width="16" height="16"/>
+    </resources>
+</document>

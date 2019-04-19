@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import IGListKit
 
 class CityViewModel: NSObject {
     var id = ""
@@ -64,6 +65,17 @@ extension CityViewModel: Model {
             RealmManager.sharedInstance.save(singleRealmObject: .city, value: jsonDict)
             completion?(self?.id)
         }
+    }
+}
+
+extension CityViewModel: ListDiffable {
+    func diffIdentifier() -> NSObjectProtocol {
+        return id as NSObjectProtocol
+    }
+    
+    func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+        guard let cityModel = object as? CityViewModel else { return false }
+        return (id == cityModel.id && name == cityModel.name)
     }
 }
 

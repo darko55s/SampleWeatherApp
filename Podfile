@@ -7,4 +7,5 @@ target 'SampleWeatherApp' do
   pod 'IGListKit', '~> 3.0'
   pod 'Alamofire'
   pod 'RealmSwift'
+pod 'Kingfisher', '~> 5.0'
 end
