@@ -17,8 +17,10 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
 
+    var selectedFrame = CGRect.zero
     var items = [ListDiffable]()
-    
+    let animator = CustomAnimator()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAddCityButton()
@@ -48,13 +50,25 @@ class HomeViewController: UIViewController {
     }
     
     private func populateInitialyCollection() {
-        items.removeAll()
         CityViewModel.findMultiple(filter: NSPredicate(format: "userPicked == true")) { [weak self] cities in
             guard let cities = cities as? [CityViewModel] else { return }
             
-            self?.items.append(contentsOf: cities)
+            self?.appendCities(cities: cities)
             self?.adapter.performUpdates(animated: true, completion: nil)
             self?.fetchCities(cities: cities)
+        }
+    }
+    
+    private func appendCities(cities: [CityViewModel]) {
+        for city in cities {
+            if !items.contains(where: { item -> Bool in
+                if let item = item as? CityViewModel {
+                    return item.id == city.id
+                }
+                return false
+            }) {
+                items.append(city)
+            }
         }
     }
     
@@ -128,7 +142,10 @@ class HomeViewController: UIViewController {
     }
     
     private func openWeatherDeatilsFor(weather: WeatherDetailsViewModel) {
-        
+        let weatherDetailsController = storyboard?.instantiateViewController(withIdentifier: "WeatherDetailsViewController") as! WeatherDetailsViewController
+        weatherDetailsController.weather = weather
+        weatherDetailsController.transitioningDelegate = self
+        present(weatherDetailsController, animated: true, completion: nil)
     }
     
     private func openActionSheetFor(city: CityViewModel) {
@@ -185,8 +202,9 @@ extension HomeViewController: ListAdapterDataSource {
 }
 
 extension HomeViewController: DaySectionDelegate {
-    func didSelectDay(weather: WeatherDetailsViewModel?) {
+    func didSelectDay(weather: WeatherDetailsViewModel?, frame: CGRect?){
         if let weather = weather {
+            selectedFrame = frame!
             openWeatherDeatilsFor(weather: weather)
         }
     }
@@ -203,5 +221,21 @@ extension HomeViewController: CitySectionDelegate {
         if let city = city {
             openActionSheetFor(city: city)
         }
+    }
+}
+
+extension HomeViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+     
+        animator.originFrame = collectionView.convert(selectedFrame, to: nil)
+        
+        animator.presenting = true
+        
+        return animator
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        animator.presenting = false
+        return animator
     }
 }

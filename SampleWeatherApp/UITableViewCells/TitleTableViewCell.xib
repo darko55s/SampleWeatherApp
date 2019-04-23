@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="titleCell" id="KGk-i7-Jjw" customClass="TitleTableViewCell" customModule="SampleWeatherApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kz4-S3-vu1">
+                        <rect key="frame" x="160" y="10" width="0.0" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="bGE-po-Whn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t1E-KY-g77">
+                        <rect key="frame" x="16" y="51.5" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="0LS-ZV-KFb"/>
+                            <constraint firstAttribute="width" constant="32" id="zNw-Sx-xWM"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QO8-kS-dF8">
+                        <rect key="frame" x="58" y="60" width="0.0" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="slT-bk-khh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6E-uj-w4e">
+                        <rect key="frame" x="310" y="60" width="0.0" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="OGS-39-WRV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="kz4-S3-vu1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="10M-ci-7sF"/>
+                    <constraint firstItem="QO8-kS-dF8" firstAttribute="leading" secondItem="t1E-KY-g77" secondAttribute="trailing" constant="10" id="ECS-Ys-hYr"/>
+                    <constraint firstItem="u6E-uj-w4e" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QO8-kS-dF8" secondAttribute="trailing" constant="30" id="FHz-u8-O5F"/>
+                    <constraint firstAttribute="bottom" secondItem="t1E-KY-g77" secondAttribute="bottom" constant="16" id="OGt-aX-Lr3"/>
+                    <constraint firstItem="QO8-kS-dF8" firstAttribute="centerY" secondItem="t1E-KY-g77" secondAttribute="centerY" id="fTO-bJ-zjf"/>
+                    <constraint firstItem="t1E-KY-g77" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="jaF-hr-jfg"/>
+                    <constraint firstItem="kz4-S3-vu1" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="s31-BI-2Eb"/>
+                    <constraint firstAttribute="trailing" secondItem="u6E-uj-w4e" secondAttribute="trailing" constant="10" id="txK-uL-b3Z"/>
+                    <constraint firstItem="u6E-uj-w4e" firstAttribute="top" secondItem="QO8-kS-dF8" secondAttribute="top" id="yDt-71-OHO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="currentTemp" destination="u6E-uj-w4e" id="Qd9-zg-Wtp"/>
+                <outlet property="icon" destination="t1E-KY-g77" id="k3F-v7-jmd"/>
+                <outlet property="lblDate" destination="kz4-S3-vu1" id="nJx-f5-K3C"/>
+                <outlet property="lblWeatherInfo" destination="QO8-kS-dF8" id="Sqa-ur-If2"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -96,6 +96,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="nHE-8a-vXp"/>
             <connections>
+                <outlet property="holderView" destination="JyK-Ha-QFo" id="n1h-p2-p2w"/>
                 <outlet property="icon" destination="ufb-3v-FJ4" id="h2d-lf-Kr3"/>
                 <outlet property="lblCurrentTemp" destination="eDL-Nv-Uie" id="Yrm-Mv-CDm"/>
                 <outlet property="lblMaxTemp" destination="b2D-EA-5fM" id="Yo0-Ap-6KJ"/>

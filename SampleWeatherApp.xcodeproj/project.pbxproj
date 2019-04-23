@@ -33,6 +33,12 @@
 		7BF406A8226EA08500EA73CA /* SearchCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF406A7226EA08500EA73CA /* SearchCityViewController.swift */; };
 		7BF406AA226EA1A600EA73CA /* SearchSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF406A9226EA1A600EA73CA /* SearchSectionController.swift */; };
 		7BF406AC226EA1F400EA73CA /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF406AB226EA1F400EA73CA /* SearchCell.swift */; };
+		7BF406B0226EBA2400EA73CA /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF406AE226EBA2400EA73CA /* InfoTableViewCell.swift */; };
+		7BF406B1226EBA2400EA73CA /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BF406AF226EBA2400EA73CA /* InfoTableViewCell.xib */; };
+		7BF406B4226EBAC400EA73CA /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF406B2226EBAC400EA73CA /* TitleTableViewCell.swift */; };
+		7BF406B5226EBAC400EA73CA /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BF406B3226EBAC400EA73CA /* TitleTableViewCell.xib */; };
+		7BF406B8226EBC8400EA73CA /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF406B7226EBC8400EA73CA /* Date.swift */; };
+		7BF406BA226EC46B00EA73CA /* CustomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF406B9226EC46B00EA73CA /* CustomAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +70,12 @@
 		7BF406A7226EA08500EA73CA /* SearchCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityViewController.swift; sourceTree = "<group>"; };
 		7BF406A9226EA1A600EA73CA /* SearchSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSectionController.swift; sourceTree = "<group>"; };
 		7BF406AB226EA1F400EA73CA /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		7BF406AE226EBA2400EA73CA /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		7BF406AF226EBA2400EA73CA /* InfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoTableViewCell.xib; sourceTree = "<group>"; };
+		7BF406B2226EBAC400EA73CA /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		7BF406B3226EBAC400EA73CA /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
+		7BF406B7226EBC8400EA73CA /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		7BF406B9226EC46B00EA73CA /* CustomAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimator.swift; sourceTree = "<group>"; };
 		9DC2FFFF903706AABC81D80A /* Pods-SampleWeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleWeatherApp.debug.xcconfig"; path = "Target Support Files/Pods-SampleWeatherApp/Pods-SampleWeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B889706AD4B299A115FCA681 /* Pods-SampleWeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleWeatherApp.release.xcconfig"; path = "Target Support Files/Pods-SampleWeatherApp/Pods-SampleWeatherApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +113,8 @@
 		7B7ACBD82269235300A337A3 /* SampleWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				7BF406B6226EBC7900EA73CA /* Extensions */,
+				7BF406AD226EBA0800EA73CA /* UITableViewCells */,
 				7BF406A4226E9F5800EA73CA /* CustomAnimator */,
 				7BB0113722699802003EA219 /* UICollectionCells */,
 				7BB01132226992C7003EA219 /* SectionControllers */,
@@ -132,7 +146,6 @@
 			children = (
 				7B7ACBED226929F900A337A3 /* Protocols.swift */,
 				7B7ACBEF22692A2400A337A3 /* Constants.swift */,
-				7B7ACBFA22692FB800A337A3 /* Extensions.swift */,
 			);
 			path = "Protocols&Constants";
 			sourceTree = "<group>";
@@ -183,8 +196,29 @@
 		7BF406A4226E9F5800EA73CA /* CustomAnimator */ = {
 			isa = PBXGroup;
 			children = (
+				7BF406B9226EC46B00EA73CA /* CustomAnimator.swift */,
 			);
 			path = CustomAnimator;
+			sourceTree = "<group>";
+		};
+		7BF406AD226EBA0800EA73CA /* UITableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				7BF406AE226EBA2400EA73CA /* InfoTableViewCell.swift */,
+				7BF406AF226EBA2400EA73CA /* InfoTableViewCell.xib */,
+				7BF406B2226EBAC400EA73CA /* TitleTableViewCell.swift */,
+				7BF406B3226EBAC400EA73CA /* TitleTableViewCell.xib */,
+			);
+			path = UITableViewCells;
+			sourceTree = "<group>";
+		};
+		7BF406B6226EBC7900EA73CA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7BF406B7226EBC8400EA73CA /* Date.swift */,
+				7B7ACBFA22692FB800A337A3 /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		8C012DCF2BBB50C4039CB369 /* Frameworks */ = {
@@ -266,7 +300,9 @@
 			files = (
 				7BB0113B2269981C003EA219 /* AddNewButtonCell.xib in Resources */,
 				7BB0113F2269982A003EA219 /* CityCell.xib in Resources */,
+				7BF406B1226EBA2400EA73CA /* InfoTableViewCell.xib in Resources */,
 				7B7ACBE42269235400A337A3 /* LaunchScreen.storyboard in Resources */,
+				7BF406B5226EBAC400EA73CA /* TitleTableViewCell.xib in Resources */,
 				7B7ACBE12269235400A337A3 /* Assets.xcassets in Resources */,
 				7B4B0C962269C522003C6B57 /* DayCell.xib in Resources */,
 				7B7ACBDF2269235300A337A3 /* Main.storyboard in Resources */,
@@ -336,22 +372,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B7ACBEE226929F900A337A3 /* Protocols.swift in Sources */,
+				7BF406B0226EBA2400EA73CA /* InfoTableViewCell.swift in Sources */,
 				7BB0113E2269982A003EA219 /* CityCell.swift in Sources */,
 				7B7ACBFB22692FB800A337A3 /* Extensions.swift in Sources */,
 				7BF406A3226E96D000EA73CA /* DaySectionController.swift in Sources */,
 				7BF406AC226EA1F400EA73CA /* SearchCell.swift in Sources */,
 				7B7ACBFD2269394B00A337A3 /* NetworkManager.swift in Sources */,
+				7BF406B4226EBAC400EA73CA /* TitleTableViewCell.swift in Sources */,
 				7B7ACBF522692C3700A337A3 /* City.swift in Sources */,
 				7B4B0C942269C519003C6B57 /* DayCell.swift in Sources */,
 				7B7ACBF322692AAB00A337A3 /* RealmManager.swift in Sources */,
 				7BF406A8226EA08500EA73CA /* SearchCityViewController.swift in Sources */,
 				7B7ACBDA2269235300A337A3 /* AppDelegate.swift in Sources */,
 				7BB0113A2269981C003EA219 /* AddNewButtonCell.swift in Sources */,
+				7BF406BA226EC46B00EA73CA /* CustomAnimator.swift in Sources */,
 				7BF406A6226E9F8C00EA73CA /* WeatherDetailsViewController.swift in Sources */,
 				7BB0113122699156003EA219 /* HomeViewController.swift in Sources */,
 				7BB01134226992DC003EA219 /* CitySectionController.swift in Sources */,
 				7B7ACBF922692E8000A337A3 /* WeatherDetails.swift in Sources */,
 				7BF406AA226EA1A600EA73CA /* SearchSectionController.swift in Sources */,
+				7BF406B8226EBC8400EA73CA /* Date.swift in Sources */,
 				7B7ACBF022692A2400A337A3 /* Constants.swift in Sources */,
 				7B7ACBF722692E3300A337A3 /* Weather.swift in Sources */,
 			);

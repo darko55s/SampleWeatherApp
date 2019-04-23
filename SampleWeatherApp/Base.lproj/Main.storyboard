@@ -102,20 +102,51 @@
             </objects>
             <point key="canvasLocation" x="742" y="-488"/>
         </scene>
-        <!--View Controller-->
+        <!--Weather Details View Controller-->
         <scene sceneID="iLa-TZ-wBr">
             <objects>
-                <viewController id="52U-RR-FiU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WeatherDetailsViewController" id="52U-RR-FiU" customClass="WeatherDetailsViewController" customModule="SampleWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="idZ-QI-IDv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B9M-5u-HI8">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBl-EJ-IIj">
+                                <rect key="frame" x="30" y="52" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="DiV-nM-12k"/>
+                                    <constraint firstAttribute="height" constant="32" id="fz9-vq-jDb"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="onClose:" destination="52U-RR-FiU" eventType="touchUpInside" id="2Ss-M8-f1f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="KBl-EJ-IIj" firstAttribute="leading" secondItem="Us0-Oj-ksc" secondAttribute="leading" constant="30" id="5pi-mK-kIb"/>
+                            <constraint firstItem="B9M-5u-HI8" firstAttribute="top" secondItem="Us0-Oj-ksc" secondAttribute="top" constant="50" id="Mco-tO-cNk"/>
+                            <constraint firstItem="Us0-Oj-ksc" firstAttribute="trailing" secondItem="B9M-5u-HI8" secondAttribute="trailing" id="al3-7a-VEG"/>
+                            <constraint firstItem="Us0-Oj-ksc" firstAttribute="bottom" secondItem="B9M-5u-HI8" secondAttribute="bottom" id="boJ-QS-0Yw"/>
+                            <constraint firstItem="B9M-5u-HI8" firstAttribute="top" secondItem="KBl-EJ-IIj" secondAttribute="bottom" constant="10" id="msT-uF-oOT"/>
+                            <constraint firstItem="B9M-5u-HI8" firstAttribute="leading" secondItem="Us0-Oj-ksc" secondAttribute="leading" id="s5V-lf-0YA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Us0-Oj-ksc"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="B9M-5u-HI8" id="g31-vc-8x7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5PS-C4-4s9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="742" y="210"/>
+            <point key="canvasLocation" x="741" y="194"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="close" width="16" height="16"/>
+    </resources>
 </document>

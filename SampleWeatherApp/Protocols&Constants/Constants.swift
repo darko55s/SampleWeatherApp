@@ -12,6 +12,16 @@ enum NetworkError: Error {
     case badData
 }
 
+enum WeatherDetailsCellType: Int {
+    case title
+    case windSpeed
+    case windDirection
+    case preasure
+    case humidity
+    case visibility
+    case predictability
+}
+
 typealias NetworkCompletion = (_ id: String?,_ error: Error?) -> ()
 typealias NetworkSearchCompletion = (_ ids: [String]?,_ error: Error?) -> ()
 

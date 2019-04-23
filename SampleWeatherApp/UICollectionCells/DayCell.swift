@@ -16,6 +16,8 @@ class DayCell: UICollectionViewCell {
     @IBOutlet weak var lblMinTemp: UILabel!
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var weekDay: UILabel!
+    @IBOutlet weak var holderView: UIView!
+    
     func setupCell(weather: WeatherDetailsViewModel) {
         lblCurrentTemp.text = "Current\n\(Int(weather.temp))˚"
         lblMaxTemp.text = "Max\n\(Int(weather.maxTemp))˚"

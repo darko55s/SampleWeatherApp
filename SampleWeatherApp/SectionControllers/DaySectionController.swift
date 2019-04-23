@@ -10,7 +10,7 @@ import UIKit
 import IGListKit
 
 protocol DaySectionDelegate: class {
-    func didSelectDay(weather: WeatherDetailsViewModel?)
+    func didSelectDay(weather: WeatherDetailsViewModel?, frame: CGRect?)
 }
 
 class DaySectionController: ListSectionController {
@@ -35,6 +35,8 @@ class DaySectionController: ListSectionController {
     }
     
     override func didSelectItem(at index: Int) {
-        delegate?.didSelectDay(weather: weather)
+        let cell = collectionContext?.cellForItem(at: index, sectionController: self) as! DayCell
+        let frame =  cell.holderView.superview!.convert(cell.holderView.frame, to: nil)
+        delegate?.didSelectDay(weather: weather,frame: frame)
     }
 }
