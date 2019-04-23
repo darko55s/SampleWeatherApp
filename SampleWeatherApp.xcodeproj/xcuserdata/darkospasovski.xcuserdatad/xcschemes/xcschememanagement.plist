@@ -7,7 +7,45 @@
 		<key>SampleWeatherApp.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>SampleWeatherAppDev.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>6</integer>
+		</dict>
+		<key>SampleWeatherAppTest.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>SampleWeatherAppUA.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>7B7ACBD52269235300A337A3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7BF406BB226ED1D300EA73CA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7BF406EC226ED23F00EA73CA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7BF40719226ED24F00EA73CA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
