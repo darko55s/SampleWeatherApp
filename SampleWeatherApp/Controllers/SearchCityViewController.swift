@@ -61,6 +61,10 @@ extension SearchCityViewController: CitySectionDelegate {
             navigationController?.popViewController(animated: true)
         }
     }
+    
+    func didLongPressCity(city: CityViewModel?) {
+        
+    }
 }
 
 extension SearchCityViewController: SearchSectionDelegate {

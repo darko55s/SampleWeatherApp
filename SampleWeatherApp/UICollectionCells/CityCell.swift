@@ -8,9 +8,17 @@
 
 import UIKit
 
+protocol CityCellDelegate: class {
+    func didLongPress()
+}
+
 class CityCell: UICollectionViewCell {
 
     @IBOutlet weak var lblTitle: UILabel!
+    var longPressGesture: UILongPressGestureRecognizer?
+    weak var delegate: CityCellDelegate?
+    
+    var city: CityViewModel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,7 +26,16 @@ class CityCell: UICollectionViewCell {
     }
     
     func setupCell(city: CityViewModel) {
+        if longPressGesture == nil {
+            longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(didLogPressCell))
+        }
+        addGestureRecognizer(longPressGesture!)
+        self.city = city
         lblTitle.text = city.name
+    }
+    
+    @objc func didLogPressCell() {
+        delegate?.didLongPress()
     }
 
 }

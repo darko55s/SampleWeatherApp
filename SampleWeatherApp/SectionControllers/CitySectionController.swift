@@ -11,6 +11,7 @@ import IGListKit
 
 protocol CitySectionDelegate: class {
     func didSelectCity(city: CityViewModel?)
+    func didLongPressCity(city: CityViewModel?)
 }
 
 class CitySectionController: ListSectionController {
@@ -27,6 +28,9 @@ class CitySectionController: ListSectionController {
             fatalError()
         }
         cell.setupCell(city: city!)
+        if let _ = viewController as? HomeViewController {
+            cell.delegate = self
+        }
         return cell
     }
     
@@ -38,5 +42,10 @@ class CitySectionController: ListSectionController {
         city!.isExpanded = !city!.isExpanded
         delegate?.didSelectCity(city: city)
     }
+}
 
+extension CitySectionController: CityCellDelegate {
+    func didLongPress() {
+        delegate?.didLongPressCity(city: self.city)
+    }
 }

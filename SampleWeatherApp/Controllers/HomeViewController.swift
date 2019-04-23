@@ -108,22 +108,57 @@ class HomeViewController: UIViewController {
                 }
             }
         } else {
-            let predicate = NSPredicate(format: "id == %@", city.id)
-            if let weather = RealmManager.sharedInstance.find(singleRealmObject: .weather, filter: predicate) as? WeatherRealmObject {
-                let w = WeatherViewModel(realmObject: weather)
-                items.removeAll { (item) -> Bool in
-                    if let item = item as? WeatherDetailsViewModel {
-                        return w.details.contains(where: { $0.id == item.id })
-                    }
-                    return false
+           removeAllDaysFor(cityId: city.id)
+        }
+        
+        adapter.performUpdates(animated: true, completion: nil)
+    }
+    
+    private func removeAllDaysFor(cityId: String) {
+        let predicate = NSPredicate(format: "id == %@", cityId)
+        if let weather = RealmManager.sharedInstance.find(singleRealmObject: .weather, filter: predicate) as? WeatherRealmObject {
+            let w = WeatherViewModel(realmObject: weather)
+            items.removeAll { (item) -> Bool in
+                if let item = item as? WeatherDetailsViewModel {
+                    return w.details.contains(where: { $0.id == item.id })
                 }
+                return false
             }
         }
-        adapter.performUpdates(animated: true, completion: nil)
     }
     
     private func openWeatherDeatilsFor(weather: WeatherDetailsViewModel) {
         
+    }
+    
+    private func openActionSheetFor(city: CityViewModel) {
+        let actionSheet = UIAlertController(title: "Deleate", message: "Do you want to delete " + city.name, preferredStyle: .actionSheet)
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { [weak self] _ in
+            self?.delete(city: city)
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        actionSheet.addAction(deleteAction)
+        actionSheet.addAction(cancel)
+        present(actionSheet, animated: true, completion: nil)
+    }
+    
+    private func delete(city: CityViewModel) {
+        if city.isExpanded {
+            removeAllDaysFor(cityId: city.id)
+        }
+        
+        items.removeAll { item -> Bool in
+            if let item = item as? CityViewModel {
+                if item.id == city.id {
+                    item.userPicked = false
+                    item.saveViewModel(completion: nil)
+                    return true
+                }
+            }
+            return false
+        }
+        
+        adapter.performUpdates(animated: true, completion: nil)
     }
 }
 
@@ -161,6 +196,12 @@ extension HomeViewController: CitySectionDelegate {
     func didSelectCity(city: CityViewModel?) {
         if let city = city {
             appendOrRemoveDaysFor(city: city)
+        }
+    }
+    
+    func didLongPressCity(city: CityViewModel?) {
+        if let city = city {
+            openActionSheetFor(city: city)
         }
     }
 }
