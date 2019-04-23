@@ -49,9 +49,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func addPrefiledCities() {
-        let sofia: JSONDictionary = ["id":839722,"name":"Sofia"]
-        let tokyo: JSONDictionary = ["id":1118370,"name":"Tokyo"]
-        let newYork: JSONDictionary = ["id":2459115,"name":"New York"]
+        let sofia: JSONDictionary = ["woeid":839722,"title":"Sofia","userPicked":true]
+        let tokyo: JSONDictionary = ["woeid":1118370,"title":"Tokyo","userPicked":true]
+        let newYork: JSONDictionary = ["woeid":2459115,"title":"New York","userPicked":true]
         CityViewModel.saveJSONData(rawDataDict: sofia)
         CityViewModel.saveJSONData(rawDataDict: tokyo)
         CityViewModel.saveJSONData(rawDataDict: newYork)

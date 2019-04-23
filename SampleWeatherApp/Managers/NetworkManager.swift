@@ -29,4 +29,31 @@ class NetworkManager {
             }
         }
     }
+    
+    func searchForCity(searchText: String, completion: @escaping NetworkSearchCompletion) {
+        let stringUrl = API_BASE_URL + "location/search/?query=" + searchText
+        Alamofire.request(stringUrl).responseJSON { response in
+            switch response.result {
+            case .success:
+                if let jsonArray = response.result.value as? Array<JSONDictionary> {
+                    var objectIds = [String]()
+                    for json in jsonArray {
+                        CityViewModel.saveJSONData(rawDataDict: json, completion: { id in
+                            if let id = id {
+                                objectIds.append(id)
+                            }
+                            if objectIds.count == jsonArray.count {
+                                completion(objectIds, nil)
+                            }
+                        })
+                    }
+                   
+                } else {
+                    completion(nil,NetworkError.badData)
+                }
+            case .failure(let error):
+                completion(nil, error)
+            }
+        }
+    }
 }

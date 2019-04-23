@@ -11,7 +11,6 @@
 		7B4B0C942269C519003C6B57 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4B0C932269C518003C6B57 /* DayCell.swift */; };
 		7B4B0C962269C522003C6B57 /* DayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4B0C952269C522003C6B57 /* DayCell.xib */; };
 		7B7ACBDA2269235300A337A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7ACBD92269235300A337A3 /* AppDelegate.swift */; };
-		7B7ACBDC2269235300A337A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7ACBDB2269235300A337A3 /* ViewController.swift */; };
 		7B7ACBDF2269235300A337A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B7ACBDD2269235300A337A3 /* Main.storyboard */; };
 		7B7ACBE12269235400A337A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B7ACBE02269235400A337A3 /* Assets.xcassets */; };
 		7B7ACBE42269235400A337A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B7ACBE22269235400A337A3 /* LaunchScreen.storyboard */; };
@@ -25,11 +24,15 @@
 		7B7ACBFD2269394B00A337A3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7ACBFC2269394B00A337A3 /* NetworkManager.swift */; };
 		7BB0113122699156003EA219 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB0113022699156003EA219 /* HomeViewController.swift */; };
 		7BB01134226992DC003EA219 /* CitySectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB01133226992DC003EA219 /* CitySectionController.swift */; };
-		7BB011362269977A003EA219 /* AddNewCitySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB011352269977A003EA219 /* AddNewCitySection.swift */; };
 		7BB0113A2269981C003EA219 /* AddNewButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB011382269981C003EA219 /* AddNewButtonCell.swift */; };
 		7BB0113B2269981C003EA219 /* AddNewButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB011392269981C003EA219 /* AddNewButtonCell.xib */; };
 		7BB0113E2269982A003EA219 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB0113C2269982A003EA219 /* CityCell.swift */; };
 		7BB0113F2269982A003EA219 /* CityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB0113D2269982A003EA219 /* CityCell.xib */; };
+		7BF406A3226E96D000EA73CA /* DaySectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF406A2226E96D000EA73CA /* DaySectionController.swift */; };
+		7BF406A6226E9F8C00EA73CA /* WeatherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF406A5226E9F8C00EA73CA /* WeatherDetailsViewController.swift */; };
+		7BF406A8226EA08500EA73CA /* SearchCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF406A7226EA08500EA73CA /* SearchCityViewController.swift */; };
+		7BF406AA226EA1A600EA73CA /* SearchSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF406A9226EA1A600EA73CA /* SearchSectionController.swift */; };
+		7BF406AC226EA1F400EA73CA /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF406AB226EA1F400EA73CA /* SearchCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +41,6 @@
 		7B4B0C952269C522003C6B57 /* DayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayCell.xib; sourceTree = "<group>"; };
 		7B7ACBD62269235300A337A3 /* SampleWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B7ACBD92269235300A337A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7B7ACBDB2269235300A337A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7B7ACBDE2269235300A337A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B7ACBE02269235400A337A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B7ACBE32269235400A337A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,11 +55,15 @@
 		7B7ACBFC2269394B00A337A3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7BB0113022699156003EA219 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7BB01133226992DC003EA219 /* CitySectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySectionController.swift; sourceTree = "<group>"; };
-		7BB011352269977A003EA219 /* AddNewCitySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCitySection.swift; sourceTree = "<group>"; };
 		7BB011382269981C003EA219 /* AddNewButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewButtonCell.swift; sourceTree = "<group>"; };
 		7BB011392269981C003EA219 /* AddNewButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewButtonCell.xib; sourceTree = "<group>"; };
 		7BB0113C2269982A003EA219 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		7BB0113D2269982A003EA219 /* CityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCell.xib; sourceTree = "<group>"; };
+		7BF406A2226E96D000EA73CA /* DaySectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySectionController.swift; sourceTree = "<group>"; };
+		7BF406A5226E9F8C00EA73CA /* WeatherDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewController.swift; sourceTree = "<group>"; };
+		7BF406A7226EA08500EA73CA /* SearchCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityViewController.swift; sourceTree = "<group>"; };
+		7BF406A9226EA1A600EA73CA /* SearchSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSectionController.swift; sourceTree = "<group>"; };
+		7BF406AB226EA1F400EA73CA /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		9DC2FFFF903706AABC81D80A /* Pods-SampleWeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleWeatherApp.debug.xcconfig"; path = "Target Support Files/Pods-SampleWeatherApp/Pods-SampleWeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B889706AD4B299A115FCA681 /* Pods-SampleWeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleWeatherApp.release.xcconfig"; path = "Target Support Files/Pods-SampleWeatherApp/Pods-SampleWeatherApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +101,7 @@
 		7B7ACBD82269235300A337A3 /* SampleWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				7BF406A4226E9F5800EA73CA /* CustomAnimator */,
 				7BB0113722699802003EA219 /* UICollectionCells */,
 				7BB01132226992C7003EA219 /* SectionControllers */,
 				7BB0112F2269914A003EA219 /* Controllers */,
@@ -102,7 +109,6 @@
 				7B7ACBEC226929E400A337A3 /* Protocols&Constants */,
 				7B7ACBEB226929DC00A337A3 /* Models */,
 				7B7ACBD92269235300A337A3 /* AppDelegate.swift */,
-				7B7ACBDB2269235300A337A3 /* ViewController.swift */,
 				7B7ACBDD2269235300A337A3 /* Main.storyboard */,
 				7B7ACBE02269235400A337A3 /* Assets.xcassets */,
 				7B7ACBE22269235400A337A3 /* LaunchScreen.storyboard */,
@@ -144,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				7BB0113022699156003EA219 /* HomeViewController.swift */,
+				7BF406A5226E9F8C00EA73CA /* WeatherDetailsViewController.swift */,
+				7BF406A7226EA08500EA73CA /* SearchCityViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -152,7 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				7BB01133226992DC003EA219 /* CitySectionController.swift */,
-				7BB011352269977A003EA219 /* AddNewCitySection.swift */,
+				7BF406A2226E96D000EA73CA /* DaySectionController.swift */,
+				7BF406A9226EA1A600EA73CA /* SearchSectionController.swift */,
 			);
 			path = SectionControllers;
 			sourceTree = "<group>";
@@ -166,8 +175,16 @@
 				7BB0113D2269982A003EA219 /* CityCell.xib */,
 				7B4B0C932269C518003C6B57 /* DayCell.swift */,
 				7B4B0C952269C522003C6B57 /* DayCell.xib */,
+				7BF406AB226EA1F400EA73CA /* SearchCell.swift */,
 			);
 			path = UICollectionCells;
+			sourceTree = "<group>";
+		};
+		7BF406A4226E9F5800EA73CA /* CustomAnimator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomAnimator;
 			sourceTree = "<group>";
 		};
 		8C012DCF2BBB50C4039CB369 /* Frameworks */ = {
@@ -319,19 +336,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B7ACBEE226929F900A337A3 /* Protocols.swift in Sources */,
-				7BB011362269977A003EA219 /* AddNewCitySection.swift in Sources */,
 				7BB0113E2269982A003EA219 /* CityCell.swift in Sources */,
 				7B7ACBFB22692FB800A337A3 /* Extensions.swift in Sources */,
+				7BF406A3226E96D000EA73CA /* DaySectionController.swift in Sources */,
+				7BF406AC226EA1F400EA73CA /* SearchCell.swift in Sources */,
 				7B7ACBFD2269394B00A337A3 /* NetworkManager.swift in Sources */,
 				7B7ACBF522692C3700A337A3 /* City.swift in Sources */,
 				7B4B0C942269C519003C6B57 /* DayCell.swift in Sources */,
-				7B7ACBDC2269235300A337A3 /* ViewController.swift in Sources */,
 				7B7ACBF322692AAB00A337A3 /* RealmManager.swift in Sources */,
+				7BF406A8226EA08500EA73CA /* SearchCityViewController.swift in Sources */,
 				7B7ACBDA2269235300A337A3 /* AppDelegate.swift in Sources */,
 				7BB0113A2269981C003EA219 /* AddNewButtonCell.swift in Sources */,
+				7BF406A6226E9F8C00EA73CA /* WeatherDetailsViewController.swift in Sources */,
 				7BB0113122699156003EA219 /* HomeViewController.swift in Sources */,
 				7BB01134226992DC003EA219 /* CitySectionController.swift in Sources */,
 				7B7ACBF922692E8000A337A3 /* WeatherDetails.swift in Sources */,
+				7BF406AA226EA1A600EA73CA /* SearchSectionController.swift in Sources */,
 				7B7ACBF022692A2400A337A3 /* Constants.swift in Sources */,
 				7B7ACBF722692E3300A337A3 /* Weather.swift in Sources */,
 			);

@@ -9,9 +9,14 @@
 import UIKit
 import IGListKit
 
+protocol CitySectionDelegate: class {
+    func didSelectCity(city: CityViewModel?)
+}
+
 class CitySectionController: ListSectionController {
     
     private var city: CityViewModel?
+    weak var delegate: CitySectionDelegate?
     
     override func sizeForItem(at index: Int) -> CGSize {
         return CGSize(width: collectionContext!.containerSize.width, height: 70)
@@ -27,6 +32,11 @@ class CitySectionController: ListSectionController {
     
     override func didUpdate(to object: Any) {
         self.city = object as? CityViewModel
+    }
+    
+    override func didSelectItem(at index: Int) {
+        city!.isExpanded = !city!.isExpanded
+        delegate?.didSelectCity(city: city)
     }
 
 }

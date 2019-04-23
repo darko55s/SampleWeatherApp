@@ -13,10 +13,13 @@ import IGListKit
 class CityViewModel: NSObject {
     var id = ""
     var name = ""
+    var isExpanded = false
+    var userPicked = false
     
     init(realmObject: CityRealmObject) {
         id = realmObject.id
         name = realmObject.name
+        userPicked = realmObject.userPicked
     }
 }
 
@@ -43,10 +46,12 @@ extension CityViewModel: Model {
     }
     
     static func saveJSONData(rawDataDict: JSONDictionary, completion: IDCompletion? = nil) {
-        guard let id = rawDataDict["id"] as? Int, id != 0 else { completion?(nil); return }
+        guard let id = rawDataDict["woeid"] as? Int, id != 0 else { completion?(nil); return }
         let stringId = "\(id)"
         var jsonDict: JSONDictionary = ["id":stringId]
-        if let name = rawDataDict["name"] as? String { jsonDict["name"] = name }
+        if let name = rawDataDict["title"] as? String { jsonDict["name"] = name }
+        if let userPicked = rawDataDict["userPicked"] as? Bool { jsonDict["userPicked"] = userPicked }
+        
         DispatchQueue.main.async {
             RealmManager.sharedInstance.save(singleRealmObject: .city, value: jsonDict)
             completion?(stringId)
@@ -58,7 +63,8 @@ extension CityViewModel: Model {
         
         let jsonDict: JSONDictionary = [
             "id": id,
-            "name": name
+            "name": name,
+            "userPicked": userPicked
         ]
         
         DispatchQueue.main.async { [weak self] in
@@ -82,6 +88,7 @@ extension CityViewModel: ListDiffable {
 @objcMembers class CityRealmObject: Object {
     dynamic var id = ""
     dynamic var name = ""
+    dynamic var userPicked = false
     
     override static func primaryKey() -> String? { return "id" }
 }

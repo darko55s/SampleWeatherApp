@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import IGListKit
 
 class WeatherDetailsViewModel: NSObject {
     
@@ -26,6 +27,7 @@ class WeatherDetailsViewModel: NSObject {
     var humidity = 0.0
     var visibility = 0.0
     var predictability = 0
+    var cityId = ""
     
     init(realmObject: WeatherDetailsRealmObject) {
         id = realmObject.id
@@ -43,6 +45,7 @@ class WeatherDetailsViewModel: NSObject {
         humidity = realmObject.humidity
         visibility = realmObject.visibility
         predictability = realmObject.predictability
+        cityId = realmObject.cityId
     }
 }
 
@@ -112,7 +115,8 @@ extension WeatherDetailsViewModel: Model {
             "airPreasure": airPreasure,
             "humidity": humidity,
             "visibility": visibility,
-            "predictability": predictability
+            "predictability": predictability,
+            "cityId":cityId
         ]
         
         DispatchQueue.main.async { [weak self] in
@@ -120,6 +124,19 @@ extension WeatherDetailsViewModel: Model {
             completion?(self?.id)
         }
     }
+}
+
+extension WeatherDetailsViewModel: ListDiffable {
+    func diffIdentifier() -> NSObjectProtocol {
+        return id as NSObjectProtocol
+    }
+    
+    func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+        guard let weatherModel = object as? WeatherDetailsViewModel else { return false }
+        return (id == weatherModel.id && applicableDate == weatherModel.applicableDate)
+    }
+    
+    
 }
 
 @objcMembers class WeatherDetailsRealmObject: Object {
@@ -139,6 +156,7 @@ extension WeatherDetailsViewModel: Model {
     dynamic var humidity = 0.0
     dynamic var visibility = 0.0
     dynamic var predictability = 0
+    dynamic var cityId = ""
     
     override static func primaryKey() -> String? { return "id" }
 }
